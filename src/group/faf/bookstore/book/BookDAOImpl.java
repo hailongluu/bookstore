@@ -59,7 +59,7 @@ public class BookDAOImpl implements BookDAO {
             Publisher publisher = getPublisher(rs.getInt(9));
             Category category = getCategory(rs.getInt(7));
             Book book = new Book(rs.getInt(1),rs.getString(2),publisher,date,rs.getFloat(4)
-            ,rs.getInt(5),true,category,rs.getString(8),null);
+            ,rs.getInt(5),true,category,rs.getString(8),null,rs.getString(10));
             listBook.add(book);
         }
         return listBook;
@@ -75,6 +75,8 @@ public class BookDAOImpl implements BookDAO {
     public List<Book> getAllBook() {
         return null;
     }
+
+
     public List<Book> getListBookByName(String name){
         ArrayList<Book> listBook = new ArrayList<>();
         try {
@@ -88,7 +90,7 @@ public class BookDAOImpl implements BookDAO {
                 Publisher publisher = getPublisher(rs.getInt(9));
                 Category category = getCategory(rs.getInt(7));
                 Book book = new Book(rs.getInt(1),rs.getString(2),publisher,date,rs.getFloat(4)
-                        ,rs.getInt(5),true,category,rs.getString(8),null);
+                        ,rs.getInt(5),true,category,rs.getString(8),null,rs.getString(10));
                 listBook.add(book);
             }
             return listBook;

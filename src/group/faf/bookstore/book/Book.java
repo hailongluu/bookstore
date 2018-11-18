@@ -14,9 +14,10 @@ public class Book {
 	private Boolean status;
 	private Category category;
 	private String author;
+	private String imageLink;
 	public List<Review> listReview;
 
-	public Book(int id, String title, Publisher publisher, Date publishDate, Float price, int numberOfPages, Boolean status, Category category, String author, List<Review> listReview) {
+	public Book(int id, String title, Publisher publisher, Date publishDate, Float price, int numberOfPages, Boolean status, Category category, String author, List<Review> listReview, String img) {
 		this.id = id;
 		this.title = title;
 		this.publisher = publisher;
@@ -27,6 +28,7 @@ public class Book {
 		this.category = category;
 		this.author = author;
 		this.listReview = listReview;
+		this.imageLink = img;
 	}
 
 	public int getId() {
@@ -69,6 +71,10 @@ public class Book {
 		return listReview;
 	}
 
+	public String getImageLink() {
+		return imageLink;
+	}
+
 	@Override
 	public String toString() {
 		return "Book{" +
@@ -81,6 +87,7 @@ public class Book {
 				", status=" + status +
 				", category=" + category +
 				", author='" + author + '\'' +
+				", imageLink='" + imageLink + '\'' +
 				", listReview=" + listReview +
 				'}';
 	}

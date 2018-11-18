@@ -9,7 +9,8 @@ public class SellingStatistic extends Book {
 	private float revenue;
 	private Date date;
 
-	public SellingStatistic(int id, String title, Publisher publisher, Date publishDate, Float price, int numberOfPages, Boolean status, Category category, String author, List<Review> listReview) {
-		super(id, title, publisher, publishDate, price, numberOfPages, status, category, author, listReview);
+
+	public SellingStatistic(int id, String title, Publisher publisher, Date publishDate, Float price, int numberOfPages, Boolean status, Category category, String author, List<Review> listReview, String img) {
+		super(id, title, publisher, publishDate, price, numberOfPages, status, category, author, listReview, img);
 	}
 }

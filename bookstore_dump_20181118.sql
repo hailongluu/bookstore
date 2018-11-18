@@ -172,8 +172,9 @@ CREATE TABLE `book` (
   `Category` int(10) DEFAULT NULL,
   `Author` varchar(125) DEFAULT NULL,
   `PublisherId` int(10) NOT NULL,
+  `imagelink` varchar(600) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -182,7 +183,7 @@ CREATE TABLE `book` (
 
 LOCK TABLES `book` WRITE;
 /*!40000 ALTER TABLE `book` DISABLE KEYS */;
-INSERT INTO `book` VALUES (1,'Van hoc','2018-02-02',10000,120,1,1,'Nguyen Hoai',1),(2,'dac nhan tam','2018-11-18',100000,120,1,1,'Kim Lan',1),(3,'van hoc','2018-11-18',100000,120,1,1,'Kim Lan',1);
+INSERT INTO `book` VALUES (1,'Van hoc','2018-02-02',10000,120,1,1,'Nguyen Hoai',1,NULL),(2,'dac nhan tam','2018-11-18',100000,120,1,1,'Kim Lan',1,NULL),(3,'van hoc','2018-11-18',100000,120,1,1,'Kim Lan',1,NULL),(4,'Dac nhan tam ','2018-11-18',100000,120,1,1,'Kim Lan',1,'https://www.google.com.vn/search?q=dacnhantam&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiqu7Wwm93eAhWEiLwKHeHJAKMQ_AUIDygC&biw=1366&bih=701#imgrc=RllbiTYsgOiqFM:');
 /*!40000 ALTER TABLE `book` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -889,4 +890,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-18 11:17:26
+-- Dump completed on 2018-11-18 12:46:08
